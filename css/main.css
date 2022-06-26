@@ -4,12 +4,19 @@
 html, body {
     background: #253141;
     font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to bottom,
+    rgba(37,49,60,0.7) 0%,
+    #253141 60%,
+    #253141 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 30px 30px;
+    padding: 30px;
 }
 
 header .left-menu {
@@ -30,11 +37,21 @@ header .left-menu .menu {
 }
 
 header .left-menu .menu a {
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     padding: 0 20px;
     text-transform: uppercase;
     font-weight: 300;
+    transition: all 0.2s ease-in-out;
+}
+
+header .left-menu .menu a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+header .left-menu .menu a .fa{
+    margin-left: 10px;
 }
 
 header .right-menu {
@@ -49,12 +66,23 @@ header .right-menu .language {
     padding: 0 60px 0 0 ;
     text-transform: uppercase;
     font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+header .right-menu .language:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+header .right-menu .language .fa{
+    margin-left: 10px;
 }
 
 header .right-menu .signin {
-    background:#0375d5 ;
+    background:#156bc2 ;
     border-radius: 4px;
-    padding: 20px;
+    padding: 10px 20px;
     font-size: 0.85rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -97,6 +125,8 @@ header .right-menu .signin {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
+
 }
 
 #featured .videos-section .video.center {
@@ -105,23 +135,22 @@ header .right-menu .signin {
     background: red;
 }
 
-#featured .videos-section .video-center .image {
+#featured .videos-section .video.center .image {
     width: 100%;
     height: 349px;
     background: url("http://gamerspack.co.il/wp-content/uploads/2020/03/call_of_duty_warzone_02.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     transform: scale(1.05);
-    border: 2px solid #00b4f0;
+    border: 2px solid #34c3eb;
 }
-
-
-
 
 
 
 #featured .videos-section .video:nth-child(1).image,
 #featured .videos-section .video:nth-child(5).image {
     position: relative;
-
 }
 
 
@@ -132,8 +161,11 @@ header .right-menu .signin {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
 }
+
+
 
 #featured .videos-section .video:nth-child(5) .image .arrow{
     height: 100%;
@@ -144,6 +176,7 @@ header .right-menu .signin {
     align-items: center;
     padding: 10px;
     right: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 #featured .videos-section .video:nth-child(1) .image .arrow .fa,
